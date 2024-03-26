@@ -20,7 +20,6 @@ export class SearchComponent {
   closed: boolean = true;
   currencies$?: Observable<any>;
   currency: Currency = {name: 'None', symbol: 'None'};
-  currenciesAndCountries?: any;
 
   constructor(public api: ApiService) {}
   
