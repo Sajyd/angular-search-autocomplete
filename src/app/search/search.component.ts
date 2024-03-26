@@ -33,13 +33,18 @@ export class SearchComponent {
         map((array: any) => {
           if (this.currency?.name != 'None') {
             return array.filter((x: any) => {
-              const curr: any = Object.values(x['currencies'])[0];
-              return curr.name == this.currency?.name;
+              let res = false;
+              for (let c of Object.keys(x.currencies)) {
+                if (x.currencies[c].name == this.currency.name) {
+                  res = true; 
+                  break;
+                }
+              }
+              return res;
             })
           }
           return array;
-        }),
-        tap(v => console.log(v))
+        })
       ),
       fromEvent(this.select?.nativeElement, 'change').pipe(
         map((e: any) => e.target.value),

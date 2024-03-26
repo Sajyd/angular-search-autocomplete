@@ -19,10 +19,11 @@
     position: absolute;
     overflow: scroll;
     background-color: whitesmoke;
-    top: 43px;
+    top: 53px;
     width: 300px;
     display: flex;
     flex-direction: column;
+    padding-right: 4px;
 }
 
 .row {
