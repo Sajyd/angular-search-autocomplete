@@ -1,0 +1,34 @@
+.searchComponent {
+    display: flex;
+    flex-direction: row;
+}
+
+.searchInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown {
+    max-height: 500px;
+    position: absolute;
+    overflow: scroll;
+    background-color: whitesmoke;
+    top: 43px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 2px 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.row:hover {
+    background-color: #824D74;
+    color: white;
+    cursor: pointer;
+}

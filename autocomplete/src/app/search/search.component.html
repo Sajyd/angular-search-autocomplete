@@ -1,0 +1,28 @@
+
+<div class="searchComponent">
+    <div class="searchInput">
+        <input #searchInput name="searchInput" placeholder="Recherche" [(ngModel)]="search" (focus)="closed = false" (click)="closed = false"/>
+        <div *ngIf="(countries$ | async) as countries">
+            <div *ngIf="!closed" class="dropdown">
+                <div class="row" *ngFor="let country of countries" (click)="selectCountry(country)">
+                    {{country.name.common}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="currency">
+        <select #select [(ngModel)]="currency" name="currency">
+            <option selected="selected" [ngValue]="{name: 'None', symbol: 'None'}">
+                None
+            </option>
+            <option *ngFor="let currency of (currencies$ | async)" [ngValue]="{name: currency.name, symbol: currency.symbol}">
+                {{currency.name}}
+                {{currency.symbol}}
+            </option>
+        </select>
+    </div>
+    <div *ngIf="selectedCountry" class="selected">
+        Your country is {{selectedCountry.name.common}}
+    </div>
+</div>
