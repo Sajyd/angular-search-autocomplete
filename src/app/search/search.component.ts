@@ -22,11 +22,7 @@ export class SearchComponent {
   currency: Currency = {name: 'None', symbol: 'None'};
   currenciesAndCountries?: any;
 
-  
-  constructor(public api: ApiService) {
-
-  }
-
+  constructor(public api: ApiService) {}
   
   ngAfterViewInit() {
     this.countries$ = merge(
@@ -63,16 +59,7 @@ export class SearchComponent {
         }))
       })
     )
-    // this.api.getCurrenciesAndCountries().subscribe(res => this.currenciesAndCountries = res)
   }
-
-  // @HostListener('window:click', ['$event'])
-  // clickout(event: Event) {
-  //   if(!this.dropdown?.nativeElement.contains(event.target)) {
-  //     this.closed = true;
-  //   }
-  // }
-
 
   selectCountry(country: Country){
     this.closed = true
