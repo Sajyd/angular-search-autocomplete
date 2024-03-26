@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { catchError, debounceTime, EMPTY, filter, fromEvent, map, merge, mergeAll, mergeMap, Observable, of, switchMap, tap } from 'rxjs';
+import { catchError, debounceTime, fromEvent, map, merge, Observable, of, switchMap, tap } from 'rxjs';
 import { ApiService } from '../api.service';
 import { Country } from '../models/Country';
 import { Currency } from '../models/Currency';
