@@ -1,6 +1,12 @@
 .searchComponent {
     display: flex;
+    flex-direction: column;
+}
+
+.searchForm {
+    display: flex;
     flex-direction: row;
+    margin: 10px auto;
 }
 
 .searchInput {
@@ -31,4 +37,10 @@
     background-color: #824D74;
     color: white;
     cursor: pointer;
+}
+
+.result {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 12px auto;
 }
