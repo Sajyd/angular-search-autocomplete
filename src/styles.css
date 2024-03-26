@@ -4,7 +4,7 @@
     transition: all 0.2s ease-out;
 }
 
-input {
+input, select {
     min-height: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: none;
@@ -16,10 +16,15 @@ input {
     width: 300px;
 }
 
-input:focus-visible {
+input:focus-visible, select:focus-visible {
     border-top: none;
     border-right: none;
     border-left: none;
     border-bottom: 2px solid #401F71;
     outline: none;
+}
+
+select {
+    min-height: 33px;
+    margin-left: 5px;
 }

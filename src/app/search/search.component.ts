@@ -61,6 +61,14 @@ export class SearchComponent {
     )
   }
 
+  @HostListener('window:click', ['$event'])
+  clickout(event: Event) {
+    if(!this.dropdown?.nativeElement.contains(event.target) &&
+      !this.searchInput?.nativeElement.contains(event.target)) {
+      this.closed = true;
+    }
+  }
+
   selectCountry(country: Country){
     this.closed = true
     this.selectedCountry = country
