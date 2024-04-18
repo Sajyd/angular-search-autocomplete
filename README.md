@@ -1,5 +1,7 @@
 # Autocomplete
 
+Basic Angular Search AutoComplete with dynamic API calls and filtering
+
 ![](https://github.com/Sajyd/autocomplete/blob/main/autocomplete.gif)
 
 ## Development server
